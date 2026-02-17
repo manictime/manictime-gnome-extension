@@ -1,0 +1,14 @@
+{
+  "description": "Integrates GNOME with ManicTime for activity tracking",
+  "name": "ManicTime Gnome Extension",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49"
+  ],
+  "url": "https://github.com/manictime/manictime-gnome-extension",
+  "uuid": "manictime-gnome-extension@manictime.com",
+  "version": 9
+}
