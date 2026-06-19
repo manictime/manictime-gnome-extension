@@ -18,7 +18,7 @@ export default class ManicTimeGnomeExtension {
     disable() {
         this._dbus.flush();
         this._dbus.unexport();
-        delete this._dbus;
+        this._dbus = null;
     }
 
     GetActiveWindow() {
