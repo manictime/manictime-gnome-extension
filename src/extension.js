@@ -26,13 +26,14 @@ export default class ManicTimeGnomeExtension {
             .map(a => a.meta_window)
             .find(w => w.has_focus());
 
+        // Always reply: returning undefined for the string out argument leaves the D-Bus call unanswered.
         return JSON.stringify(
-            active_window && {
+            active_window ? {
                 wm_class: active_window.get_wm_class(),
                 pid: active_window.get_pid(),
                 window_id: active_window.get_id(),
                 window_title: active_window.get_title()
-            }
+            } : null
         );
     }
 }
